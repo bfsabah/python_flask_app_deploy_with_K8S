@@ -1,0 +1,22 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myflaskapp-deploy
+  labels:
+    app: myflaskapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myflaskapp
+  template:
+    metadata:
+      labels:
+        app: myflaskapp
+    spec:
+      containers:
+      - name: myflaskapp
+        image: dhemir/my_flask_app:0.1
+        ports:
+        - containerPort: 5000
