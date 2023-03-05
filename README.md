@@ -74,7 +74,7 @@ Create a new file in the templates directory and name it home.html. We will add 
 
 Our home.html file will look like this:
 
-CODE SNIPPET COMES HERE*******
+https://github.com/bfsabah/python_flask_app_deploy_with_K8S/blob/b38c4cbd2240e98b60ec8510f700fda761f9b1c1/templates/home.html#L1-L12
 
 Next, we will create a route and function to serve our HTML file. To serve HTML files in flask, we will import and use a Flask function called render_template.
 
