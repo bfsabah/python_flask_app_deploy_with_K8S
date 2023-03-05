@@ -54,7 +54,7 @@ pip freeze > requirements.txt
 **Step 2 : Build the Flask Application**<br>
 Create app.py file and start coding.
 
-Code Snippet comes here****
+https://github.com/bfsabah/python_flask_app_deploy_with_K8S/blob/cfa9bff6fd77fa68f717aae87b9f4a01d8af5fe6/app_v1.py#L1-L14
 
 To run the app on your local :
 ```
