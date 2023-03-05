@@ -80,7 +80,7 @@ Next, we will create a route and function to serve our HTML file. To serve HTML 
 
 Our app.py now file will look like this:
 
-CODE SNIPPET: APP.py v2********
+https://github.com/bfsabah/python_flask_app_deploy_with_K8S/blob/65294e4d3aa6cea77b9fe4e645688dd57b5e8b3f/app.py#L1-L19
 
 Run the application on your local machine by running:
 ```
@@ -89,7 +89,8 @@ python app.py
 
 Navigate to localhost:5000/home on your preferred browser to view your Flask application.
 
-HOME PAGE screenshot***
+![image](https://user-images.githubusercontent.com/113843658/222987812-9b2a5cb2-21e4-4847-9009-f4d0b90b8de7.png)
+
 
 Now that we have our basic Flask app running, we will go on to build a docker image for our application so we can deploy it with Kubernetes.
 
@@ -101,7 +102,7 @@ To build our docker image we need to create a Dockerfile in our application dire
 
 Create a file and name it Dockerfile and add the following lines in it:
 
-DOCKER CODE SNIPPET****
+https://github.com/bfsabah/python_flask_app_deploy_with_K8S/blob/65294e4d3aa6cea77b9fe4e645688dd57b5e8b3f/Dockerfile#L1-L9
 
 In the Dockerfile, we are building our application off a python base image on the first line. The next line creates a work directory and the third line in the Dockerfile sets the created directory as the work directory. The fourth and sixth line copies requirements.txt and installs the packages in it, meanwhile the fifth line upgrades the pip python package manager. Next thing we do is copy all the files in our application directory and expose our application to port 5000 and run our application with the last line.
 
@@ -137,7 +138,7 @@ Next, we’ll create a deploy manifest file that will create and also get our de
 
 Create a manifest file named my_flask_app_deploy.yaml:
 
-deploy_yaml*****
+https://github.com/bfsabah/python_flask_app_deploy_with_K8S/blob/65294e4d3aa6cea77b9fe4e645688dd57b5e8b3f/my_flask_app_deployment.yaml#L2-L22
 
 To roll out the deployment in our flaskapp namespace run:
 
@@ -158,7 +159,7 @@ Next, we will create a Kubernetes service to create a stable network for the run
 
 Create a manifest file called my_flask_app_service.yaml:
 
-SERVICE.yaml*******
+https://github.com/bfsabah/python_flask_app_deploy_with_K8S/blob/65294e4d3aa6cea77b9fe4e645688dd57b5e8b3f/my_flask_app_service.yaml#L2-L15
 
 To create the service run:
 ```
